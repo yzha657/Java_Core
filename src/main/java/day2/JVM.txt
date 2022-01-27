@@ -1,0 +1,22 @@
+JVM is an abstract machine that provides runtime environments in which Java bytecode (.class files) can be executed.
+There are three modules in JVM: the Class Loader, JVM Memory and Execution Engine.
+
+Class Loader Subsystem is responsible for three activities: loading, linking, and initialization.
+    Loading: The class loader can read the ‘.class” file, and load the Class, Variable, and Method information in method area.
+    Linking: Class loader verifies the validity of bytecode, and allocates memory to the class.
+    Initialization: All static variables are assigned.
+
+There are 5 specific areas included in Runtime Data Area:
+    Method Area: Method Area stores all class level information including class name, parent class name, methods, and variable information.
+    Heap area: Heap Area stores all objects in the class.
+    Stack area: Stack area contains local variables used by a thread. A stack area is created for each thread and destroyed after thread terminates.
+    PC Register: PC Register stores address of current execution instruction of a thread.
+    Native method stack: Stores native method information for each thread.
+
+Executive engine executes the bytecode.it reads the bytecode and executes with information in the memory area and instructions.
+There are three parts in the executive engine:
+    Interpreter: Interpreter reads the bytecode line by line and executes. It is inefficient when same method is called multiple times.
+    JIT compiler: JIT compiler provide the native code directly for repetitive method calls so interpreter doesn’t need to re-execute the same method. JIT compiler increases the efficiency of executive engine.
+    Garbage Collector: It destroys un-referenced objects during execution.
+
+Native methods: C/C++ methods required by Execution Engine specific to hardware.
