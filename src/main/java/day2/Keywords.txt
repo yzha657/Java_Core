@@ -1,0 +1,55 @@
+Keywords:
+
+Reserved words for data types:
+	byte: signed numerical data type with 8 bits. Range from -128 to 127
+	short: signed numerical data type with 16 bits. Range from -32768 to 32767
+	int: signed numerical data type with 32 bits. Range from -2^31 to 2^31 -1
+	long: numerical data type with 64 bits.
+	float: single precision 32-bit floating-point data type.
+	double: double precision 64-bit floating-point data type.
+	boolean: simple flags for true and false.
+	char: single 16-bit Unicode character.
+
+Reserved words for flow control:
+	if: start of an if statement. Only execute the block of code if conditions are met.
+	else: used within the if statement. Only execute the block of code if conditions are not met.
+	switch: start of a switch statement. Only execute the block that matches the label.
+	case: used within the switch statement. Represents the label and its block of code.
+	default: used within switch statement. Only execute the block when no matching label found.
+	while: start of a while loop. Loop the block of code until condition not met.
+	break: used within while loop or for loop. Force exits the loop.
+	continue: used within while loop or for loop. Force executes the next iteration of loop.
+	return: used within a method. Complete the execution of method and return the value to caller.
+
+Keywords for modifiers:
+	public: declares a member’s access as public. Accessible to all other classes.
+	private: declares a member’s access as private. Accessible only within the declared class.
+	protected: declares a member’s access as protected. Accessible within same class or subclass in same package.
+	static: marks that a particular member belongs to a type itself, rather than any instance of the type.
+	final: A final class cannot be inherited. A final method cannot be overridden. A final variable cannot be reassigned.
+	abstract: sign of abstraction. Only declare the signature rather than the specific implementation.
+	synchronized: used for thread-safety. Only allow only thread to execute the block at any given time.
+	native: used to mark code other than Java.
+	strictfp: used to restrict floating-point calculations and ensure the same result on every platform.
+
+Keywords for exception handling:
+	try: start of a try…catch statement. Execute the block of code while testing for errors.
+	catch: used within try…catch statement. Handles listed type exceptions.
+	finally: used within try… catch statement. Always execute the block of code after the try…catch statement.
+	throw: explicitly throw an exception from a method or any block of code.
+	throws: used in the signature of method to indicate that this method might throw one of the listed type exceptions.
+	assert: start of an assert statement. Used to declare an expected boolean condition.
+
+Class related keywords:
+	class: used to declare a new Java class, which is a collection of variables and methods.
+	package: declares a name space for the Java class.
+	import: declares a Java class to use in the code below the statement.
+	extends: indicate that the class inherits all the properties of the parent class.
+	implements: indicate that the class implements the interface.
+	interface: a template class with abstract methods only. No specific implementation.
+
+Object related keywords:
+	new: initiates a new instance of a class.
+	instanceof: binary operator to test if an object is a subtype of a give type.
+	super: used to reference variable that is used to refer parent class objects.
+	this: used to reference variable within the current object in a method or constructor.
