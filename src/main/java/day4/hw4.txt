@@ -1,0 +1,13 @@
+4.1 What is type erasure? <T extends E>?
+	To implement generics, the Java compiler applies type erasure to:
+        -	Replace all type parameters in generic types with their bounds (<T extends E>) or object type if the type parameters are unbounded. The produced bytecode contains only ordinary classes, interfaces and methods.
+        -	Insert type casts if necessary to preserve type safety.
+        -	Generate bridge methods to preserve polymorphism in extended generic types.
+    Type erasure ensures that no new classes are created for parameterized types; consequently, generics incur no runtime overhead.
+
+4.2 Java 8 new features – Method reference
+	Method reference is used to refer method of functional interface. When using lambda expression to refer a method, method reference can be used instead.
+	Three ways to refer a method:
+        1.	Reference to a Static method: ClassName::MethodName
+        2.	Reference to a Instance method: ObjectName::MethodName
+        3.	Reference to a Constructor: ClassName::new
