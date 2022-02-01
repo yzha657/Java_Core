@@ -1,0 +1,33 @@
+Lock
+	Multi-threaded programs may often come to a situation where multiple threads try to access the same resources and result in erroneous and unforeseen results. Therefore, locks are needed to make sure that only one thread can access the resource at a given point of time.
+
+Synchronized keyword
+    Synchronized blocks in Java are marked with the synchronized keyword. A synchronized block in Java is synchronized on some object. All synchronized blocks synchronize on the same object can only have one thread executing inside them at a time. All other threads attempting to enter the synchronized block are blocked until the thread inside the synchronized block exits the block.
+
+ReentrantLock
+    ReentrantLock allows threads to enter into the lock on a resource more than once.
+    When the thread first enters into the lock, a hold count is set to one.
+    Before unlocking the thread can re-enter into lock again and every time hold count is incremented by one.
+    For every unlock requests, hold count is decremented by one and when hold count is 0, the resource is unlocked.
+
+	lock() acquires the lock on the object by the given thread.
+	unlock() releases the lock on the object by the given thread.
+	newCondition() returns a condition instance for use with this lock instance.
+	Condition provide a means for one thread to suspend execution(to “wait”) until notified by another thread that some state condition may now be true.
+	tryLock() acquires the lock if it is not help by another thread within the given waiting time and the current thread has not been interrupted.
+	lockInterruptibly() acquires the lock unless the current thread is interrupted.
+
+ReadWrite Lock
+	A ReadWriteLock maintains a pair of associated locks, one for read-only operations and one for writing. The read lock may be held simultaneously by multiple reader thread, the write lock is exclusive.
+	ReadWriteLock allows for a greater level of concurrency in accessing share data giving the fact that while only a single thread at a time can modify the shared data, any number of threads can simultaneously read the data.
+
+Future
+	A Future represents the result of an asynchronous computation. Methods are provided to check if the computation is complete, to wait for its completion, and to retrieve the result of the computation. It is used as a placeholder for future results of a computation.
+
+    get() waits for the computation to complete
+	cancel() attempts to cancel execution of this task
+	isDone() returns true if task completed
+	isCancelled() returns true if the task was cancelled before it completed normally
+
+CompletableFuture
+	When two or more threads attempt to complete or cancel a CompletableFuture, only one of them succeeds.
