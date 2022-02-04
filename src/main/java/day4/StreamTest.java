@@ -46,3 +46,15 @@ public class StreamTest {
         System.out.println(ls.stream().reduce(0, Integer::sum) + " is the sum.");
     }
 }
+
+//output
+//[9, 25, 1, 16, 10000, 1]
+//[3, 5, 1, 4, 100]
+//[-1, 1, 3, 4, 5, 100]
+//3 5 1 4 100 -1
+//[9, 15, 3, 12, 300, -3, 27, 75, 3, 48, 30000, 3]
+//[9, 15, 3, 12, 300, -3, 27, 75, 48, 30000]
+//[3, 5, 1]
+//5 elements less than 100.
+//Optional[100] is the largest element.
+//112 is the sum.
